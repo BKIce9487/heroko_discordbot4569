@@ -32,7 +32,7 @@ async def on_message(message):
             return
         if translator.detect(content).lang == SRCLanguage or SRCLanguage == '':
             remessage = translator.translate(content, dest='zh-tw').text
-            await message.reply("翻譯:"remessage) 
+            await message.reply(remessage) 
 
 # Bot起動
 client.run(TOKEN)
